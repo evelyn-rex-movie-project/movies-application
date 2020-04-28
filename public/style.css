@@ -1,6 +1,9 @@
 html, body {
     height: 100%;
 }
+table, th, td{
+    border: solid 1px black;
+}
 
 .container {
     position: relative;
