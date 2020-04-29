@@ -14,12 +14,13 @@ const {editMovies} = require('./api.js');
 
 createTable();
 //variables that get our input text into the table
-let movieName = $("#movie-name").val();
-let movieRating = $("#movie-rating").val();
+
 
 //button to add movies to list
 $("#add-movie").click(function (e) {
     e.preventDefault();
+    let movieName = $("#movie-name").val();
+    let movieRating = $("#movie-rating").val();
     console.log(movieName, movieRating);
     postMovie({"title": movieName,
         "rating": movieRating
@@ -28,11 +29,11 @@ $("#add-movie").click(function (e) {
 });
 
 //button to edit existing movies
-$("#edit").click(function(e){
-    e.preventDefault();
-    $("#edit-movie-title").innerText();
-    editMovies();
-})
+// $("#edit").click(function(e){
+//     e.preventDefault();
+//     $("#edit-movie-title").innerText();
+//     editMovies();
+// })
 
 
 function createTable() {
