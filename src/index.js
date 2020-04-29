@@ -9,6 +9,7 @@ sayHello('World');
  * require style imports
  */
 const {getMovies} = require('./api.js');
+const {postMovie} = require('./api.js');
 
 getMovies().then((movies) => {
     console.log('Here are all the movies:');
