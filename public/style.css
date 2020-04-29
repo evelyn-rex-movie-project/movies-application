@@ -15,3 +15,7 @@ table, th, td{
 #table{
     border: solid 5px black;
 }
+
+form {
+    border: solid 1px black;
+}
