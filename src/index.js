@@ -25,6 +25,25 @@ getMovies().then((movies) => {
 
     })
     $('#table').html(html);
+    $("#add-movie").click(function (e) {
+        e.preventDefault();
+        let movieName = $("#movie-name").val();
+        let movieRating = $("#movie-rating").val();
+        let movieID = $(movies.id).val();
+        console.log(movieRating+1);
+        console.log(movies);
+        movies.push({
+           movieName,
+           movieRating,
+           movieID
+        });
+        let addHTML = `<tr>
+<td>${movieName}</td>
+<td>${movieID}</td>
+<td>${movieRating}</td>
+</tr>`;
+        $("#table").append(addHTML);
+    })
 }).catch((error) => {
     alert('Oh no! Something went wrong.\nCheck the console for details.');
     console.log(error);
