@@ -24,31 +24,22 @@ getMovies().then((movies) => {
 </tr>`;
 
 
-    })
+    });
 
     $('#table').html(html);
+
     $("#add-movie").click(function (e) {
         e.preventDefault();
         let movieName = $("#movie-name").val();
         let movieRating = $("#movie-rating").val();
-        let movieID = $(movies.id).val();
-        console.log(movieRating + 1);
-        console.log(movies);
-        postMovie({
-            movieName,
-            movieRating,
-            movieID
+        console.log(movieName, movieRating);
+        postMovie({"title": movieName,
+        "rating": movieRating
         });
         getMovies();
-        let addHTML = `<tr>
-<td>${movieName}</td>
-for (var i = 1; i > 2; i++){ 
-<td>${movieID[i]}</td>
-}
-<td>${movieRating}</td>
-</tr>`;
-        $("#table").append(addHTML);
-    })
+
+    });
+
 }).catch((error) => {
     alert('Oh no! Something went wrong.\nCheck the console for details.');
     console.log(error);

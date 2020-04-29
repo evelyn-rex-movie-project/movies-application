@@ -5,9 +5,12 @@ module.exports = {
         //
         // })
       .then(response => response.json());
-  }
-};
-module.exports = {
+  },
+
+
+
+
+
   postMovie: (title, rating) => {
     return fetch('api/movies', {
       method: 'POST',
@@ -20,4 +23,6 @@ module.exports = {
         .then(data => console.log(data))
         .catch(error => console.error(error));
   }
+
 };
+
