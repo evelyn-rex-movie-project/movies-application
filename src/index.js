@@ -9,6 +9,7 @@ sayHello('World');
  * require style imports
  */
 const {getMovies} = require('./api.js');
+const {postMovie} = require('./api.js');
 
 getMovies().then((movies) => {
     console.log('Here are all the movies:');
@@ -24,22 +25,26 @@ getMovies().then((movies) => {
 
 
     })
+
     $('#table').html(html);
     $("#add-movie").click(function (e) {
         e.preventDefault();
         let movieName = $("#movie-name").val();
         let movieRating = $("#movie-rating").val();
         let movieID = $(movies.id).val();
-        console.log(movieRating+1);
+        console.log(movieRating + 1);
         console.log(movies);
-        movies.push({
-           movieName,
-           movieRating,
-           movieID
+        postMovie({
+            movieName,
+            movieRating,
+            movieID
         });
+        getMovies();
         let addHTML = `<tr>
 <td>${movieName}</td>
-<td>${movieID}</td>
+for (var i = 1; i > 2; i++){ 
+<td>${movieID[i]}</td>
+}
 <td>${movieRating}</td>
 </tr>`;
         $("#table").append(addHTML);
