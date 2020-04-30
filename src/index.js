@@ -11,6 +11,7 @@ sayHello('World');
 const {getMovies} = require('./api.js');
 const {postMovie} = require('./api.js');
 const {editMovies} = require('./api.js');
+const {deleteMovies} = require('./api.js');
 
 createTable();
 //variables that get our input text into the table
@@ -45,7 +46,7 @@ function createTable() {
 <td>${title}</td>
 <td>${id}</td>
 <td>${rating}</td>
-<td><button type="submit" class="edit" data-id="${id}">Edit</button>
+<td><button type="submit" class="edit" data-id="${id}">Edit</button><button type="submit" class="delete" data-id="${id}">Delete</button>
 </td>
 </tr>`;
 
@@ -56,9 +57,19 @@ function createTable() {
             let dataID = $(this).attr("data-id");
             let dataTitle = $("#edit-movie-name").val();
             let dataRating = $("#edit-movie-rating").val();
-            let data = {title: dataTitle, rating: dataRating}
+            let data = {title: dataTitle, rating: dataRating};
 
             editMovies(data, dataID);
+            createTable();
+            console.log("click");
+        });
+
+        $(".delete").click(function(){
+            let dataID = $(this).attr("data-id");
+            let dataTitle = $("#edit-movie-name").val();
+            let dataRating = $("#edit-movie-rating").val();
+            let data = {title: dataTitle, rating: dataRating};
+            deleteMovies(data, dataID);
             createTable();
             console.log("click");
         });

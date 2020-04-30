@@ -11,18 +11,6 @@
       "id": 2
     },
     {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "id": 5
-    },
-    {
-      "id": 6
-    },
-    {
       "title": "jungle book",
       "rating": "9",
       "id": 7
@@ -78,23 +66,14 @@
       "id": 17
     },
     {
-      "title": "",
-      "rating": "",
-      "id": 18
-    },
-    {
-      "rating": "9",
+      "title": "la la land",
+      "rating": "6",
       "id": 19
     },
     {
       "title": "gremlins",
       "rating": "8",
       "id": 20
-    },
-    {
-      "title": "jurassic park",
-      "rating": "8",
-      "id": 21
     }
   ]
 }
