@@ -1,9 +1,28 @@
+* {
+    margin: auto;
+
+}
+
+
 html, body {
     height: 100%;
+    background-color: #F4A261;
 }
 table, th, td{
     border: solid 1px black;
 }
+
+button:hover {
+    background-color: #264653;
+    color: ivory;
+}
+
+.header {
+    font-family: 'Abel', sans-serif;
+    font-size: 2em;
+    text-decoration: underline;
+}
+
 
 .container {
     position: relative;
@@ -12,10 +31,35 @@ table, th, td{
     text-align: center;
 }
 
-#table{
-    border: solid 5px black;
+.add-a-movie {
+    background-color: #F4A261;
 }
 
-form {
+.page-data {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.modify {
+    background-color: #E9C46A;
+}
+
+.delete-button {
+    background-color: #E76F51;
+}
+
+
+#table{
+    border: solid 5px black;
+    width: 100vw;
+    background-color: #2A9D8F;
+}
+
+#add-edit {
+    width: 100vw;
     border: solid 1px black;
 }
+
+#movie-rating {
+    margin-left: 96px;
+}
+

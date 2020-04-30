@@ -1,8 +1,8 @@
 {
   "movies": [
     {
-      "title": "Casablanca",
-      "rating": "4",
+      "title": "jungle book",
+      "rating": "5",
       "id": 1
     },
     {
@@ -16,19 +16,9 @@
       "id": 7
     },
     {
-      "title": "lion king",
-      "rating": "10",
+      "title": "",
+      "rating": "",
       "id": 8
-    },
-    {
-      "title": "jurassic park",
-      "rating": "9",
-      "id": 9
-    },
-    {
-      "title": "harry potter",
-      "rating": "9",
-      "id": 10
     },
     {
       "title": "frozen",
@@ -46,8 +36,8 @@
       "id": 13
     },
     {
-      "title": "jurassic park",
-      "rating": "4",
+      "title": "la la land",
+      "rating": "5",
       "id": 14
     },
     {
@@ -74,6 +64,16 @@
       "title": "gremlins",
       "rating": "8",
       "id": 20
+    },
+    {
+      "title": "jungle book",
+      "rating": "3",
+      "id": 21
+    },
+    {
+      "title": "jungle book",
+      "rating": "5",
+      "id": 22
     }
   ]
 }
