@@ -35,13 +35,13 @@ module.exports = {
   //       .catch(error => console.error(error));
   // },
 
-  editMovies: (data, id) => {
-    return fetch ('api/movies/${id}', {
+  editMovies: (movieData, id) => {
+    return fetch (`api/movies/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(movieData),
     })
         .then(response => response.json())
         .then(data => console.log(data))

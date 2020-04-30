@@ -14,12 +14,13 @@ const {editMovies} = require('./api.js');
 
 createTable();
 //variables that get our input text into the table
-let movieName = $("#movie-name").val();
-let movieRating = $("#movie-rating").val();
+
 
 //button to add movies to list
 $("#add-movie").click(function (e) {
     e.preventDefault();
+    let movieName = $("#movie-name").val();
+    let movieRating = $("#movie-rating").val();
     console.log(movieName, movieRating);
     postMovie({"title": movieName,
         "rating": movieRating
@@ -28,11 +29,7 @@ $("#add-movie").click(function (e) {
 });
 
 //button to edit existing movies
-$("#edit").click(function(e){
-    e.preventDefault();
-    $("#edit-movie-title").innerText();
-    editMovies();
-})
+
 
 
 function createTable() {
@@ -48,14 +45,24 @@ function createTable() {
 <td>${title}</td>
 <td>${id}</td>
 <td>${rating}</td>
-<td><button id="edit">Edit</button>
+<td><button type="submit" class="edit" data-id="${id}">Edit</button>
 </td>
 </tr>`;
 
+            $('#table').html(html);
+        });
+        $(".edit").click(function(){
+             // e.preventDefault();
+            let dataID = $(this).attr("data-id");
+            let dataTitle = $("#edit-movie-name").val();
+            let dataRating = $("#edit-movie-rating").val();
+            let data = {title: dataTitle, rating: dataRating}
 
+            editMovies(data, dataID);
+            createTable();
+            console.log("click");
         });
 
-        $('#table').html(html);
 
 
     }).catch((error) => {
