@@ -36,17 +36,17 @@ $("#add-movie").click(function (e) {
 function createTable() {
     getMovies().then((movies) => {
         console.log('Here are all the movies:');
-        let html = `<tr><th>NAME</th><th>ID</th><th>RATING</th></tr>`;
+        let html = `<tr><th class="header">NAME</th><th class="header">ID</th><th class="header">RATING</th><th class="header">EDIT/DELETE</th></tr>`;
 
         movies.forEach(({title, rating, id}) => {
             console.log(`id#${id} - ${title} - rating: ${rating}`);
             $("#loading").hide();
 
             html += `<tr>
-<td>${title}</td>
-<td>${id}</td>
-<td>${rating}</td>
-<td><button type="submit" class="edit" data-id="${id}">Edit</button><button type="submit" class="delete" data-id="${id}">Delete</button>
+<td class="font-weight-bold page-data">${title}</td>
+<td class="font-weight-bold page-data">${id}</td>
+<td class="font-weight-bold page-data">${rating}</td>
+<td><button type="submit" class="edit modify" data-id="${id}">Edit</button><button type="submit" class="delete delete-button" data-id="${id}">Delete</button>
 </td>
 </tr>`;
 
